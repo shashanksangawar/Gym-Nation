@@ -1,0 +1,299 @@
+section
+{
+    margin-top: 50px; 
+    padding: 100px 200px;
+}
+
+.home
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.home::before
+{
+    z-index: 777;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height :100%;
+    top: 33px;
+    left: 0;
+    background: rgba(1, 1, 1, 0.35);
+}
+
+.home-content
+{
+    z-index: 888;
+    width: 70%;
+    color: var(--text-color);
+    display: none;
+
+}
+
+.home-content.active
+{
+    display: block;
+}
+
+
+.home-content h1
+{
+    font-size: 4em;
+    font-weight: 900;
+    text-transform: uppercase;
+    word-spacing: 5px;
+    line-height: 60px;
+    margin-bottom: 60px;
+    text-shadow: 1px 0 3px;
+}
+
+.home-content h1 span
+{
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--main-color);
+    text-shadow: var(--main-color) 1px 0 3px;
+}
+
+
+.home-content a
+{
+    color: var(--main-color);
+    text-transform: uppercase;
+    text-decoration: none;
+    background: transparent;
+    border: 5px solid var(--main-color);
+    padding: 15px 35px;
+    font-size: 1.1em;
+    font-weight: 800;
+    border-radius: 2px;
+    text-shadow: var(--main-color) 1px 0 3px;
+
+}
+
+
+.icons
+{
+    position: absolute;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s ease;
+    margin-right: 50px; 
+
+}
+
+.icons a
+{
+    font-size: 1.5em;
+
+}
+
+.icons a:not(:last-child)
+{
+    margin-bottom: 20px
+}
+
+.home img
+{
+    z-index: 000;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Slider icon */
+.slider-nav
+{
+    z-index: 888;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(80px);
+    margin-bottom: 12px;
+}
+
+.nav-button
+{
+    width: 12px;
+    height: 12px;
+    background: var(--text-color);
+    border-radius: 50%;
+    cursor:pointer;
+    box-shadow: 0 0 2px rgba(255,255,255,0.5);
+    transition: 0.3s ease;
+}
+
+.nav-button:not(:last-child)
+{
+    margin-right: 20px;
+}
+
+.nav-button:hover
+{
+    transform: scale(1.2);
+}
+
+.nav-button.active
+{
+    background: var(--main-color);
+}
+
+.img-slider
+{
+    clip-path: circle(0% at 0 50%);
+    background: var(--bg-color);
+}
+.img-slider.active
+{
+    clip-path: circle(150% at 0 50%);
+    transition: 2s ease;
+    transition-property: clip-path;
+}
+
+.home-2
+{
+    width: 100%;
+    height: 200vh;
+    background: var(--bg-color);
+    
+}
+
+.home-2-content h1 ,h2, p
+{
+    text-align: center;
+}
+
+.home-2-content h1
+{
+    font-size: 5em;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--main-color);
+    position: relative;
+}
+
+
+
+.home-2-content h2
+{
+    font-size: 2.5em;
+    text-transform: uppercase;
+}
+
+
+
+@media (max-width:768px) 
+{
+    .nav-button
+    {
+        height: 10px;
+        width: 10px;
+    }
+}
+
+@media (max-width: 520px)
+{
+    .slider-nav
+    {
+        width: 20vh;
+        height: 20vh;
+        padding-right: 40px;
+    }
+    .nav-button
+    {
+        visibility: visible;
+        width: 10px;
+        height: 10px;
+ 
+    }
+    .home-content h1
+    {
+        font-size: 7rem;
+    }
+    .home-content a
+    {
+        
+        display: flex;
+        flex-direction: row;
+        font-size: 2rem;
+        border: 5px solid var(--main-color);
+        padding: 10px 20px;
+        width: 130px;
+    
+    }
+
+}
+
+
+@media (max-width: 462px)
+{
+    .slider-nav
+    {
+        width: 20vh;
+        height: 20vh;
+        padding-right: 40px;
+    }
+    .nav-button
+    {
+        visibility: visible;
+        width: 8px;
+        height: 8px;
+ 
+    }
+    .menu-button.active
+    {
+        width: 230px;
+        height: 50px;
+    }
+
+    .navbar a
+    {
+        font-size: 2.4rem;
+    }
+
+}
+
+@media (max-width: 371px)
+{
+    .home-content
+    {
+        margin-left: -130px;
+    }
+    .slider-nav
+    {
+        margin-left: -50px;
+    }
+    .menu-button.active
+    {
+        width: 230px;
+        height: 50px;
+    }
+    .navbar a
+    {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 351px)
+{
+    .menu-button
+    {
+        width: 230px;
+        height: 50px;
+    }
+    .slider-nav
+    {
+        margin-left: -60px;
+    }
+}

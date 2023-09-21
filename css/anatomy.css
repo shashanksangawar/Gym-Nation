@@ -1,0 +1,171 @@
+.male-body
+{
+    display: grid;
+    padding: 40px 60px;
+    grid-template-columns: auto 1fr;
+    grid-gap: 20px; 
+    align-items: center;
+    margin-left: 250px;
+    transform: translate(50px);
+
+
+}
+
+.male-body-back
+{
+    width: 76.5%;
+}
+
+
+.body-map__muscle 
+{
+    transform: scale(0.4, 0.4);
+    color: aquamarine;
+    transition : color 25ms ease-in-out;
+}
+
+.human-anatomy
+{
+    margin-top: 2.5rem;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+
+}
+
+
+.body-map__muscle path:hover 
+{
+  fill: var(--main-color);
+}
+
+
+@media (max-width: 1000px)
+{
+    .human-anatomy
+    {
+        margin-top: 60px;
+        margin-left: -100px;
+    }
+}
+
+@media (max-width: 991px)
+{
+    .human-anatomy
+    {
+
+        margin-left: -110px;
+    }
+}
+
+@media (max-width: 800px)
+{
+    .human-anatomy
+    {
+        margin-left: -210px;
+        width: 130%;
+    }
+}
+
+@media (max-width: 768px)
+{
+    .human-anatomy
+    {
+        margin-left: -230px;
+    }
+}
+
+@media (max-width: 600px)
+{
+    .human-anatomy
+    {
+        margin-left: -330px;
+        width: 150%;
+
+    }
+    .male-body
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    .male-body-back
+    {
+        margin-top: 70px;
+        margin-left: 150px;
+    }
+
+}
+
+
+@media (max-width: 520px)
+{
+    .human-anatomy
+    {
+        margin-left: -300px;
+    }
+
+    .male-body-back
+    {
+        margin-left: 70px;
+    }
+
+}
+
+@media (max-width: 480px)
+{
+    .male-body-back
+    {
+        margin-left: 30px;
+    }
+}
+
+@media (max-width: 462px)
+{
+    .male-body-back
+    {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 400px)
+{
+    .human-anatomy
+    {
+        width: 200%;
+        margin-left: -370px;
+    }
+    .male-body-back
+    {
+        margin-left: 80px;
+    }
+}
+
+@media (max-width: 371px)
+{
+    .male-body-front
+    {
+        margin-left: 40px;
+
+    }
+    .male-body-back
+    {
+        margin-left: 70px;
+    }
+}
+
+@media (max-width: 320px)
+{
+    .human-anatomy
+    {
+        width: 230%;
+        margin-left: -400px;
+    }
+    .male-body-front
+    {
+        margin-left: 60px;
+    }
+    .male-body-back
+    {
+        margin-left: 50px;
+    }
+}
